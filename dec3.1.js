@@ -18,13 +18,10 @@ var width = forest[0].length
 // console.log(height + " " + width)
 
 for (var y = 0; y < height; y++) {
-    if (x >= width) {
-        x = x - width
-    }
     console.log(x + " " + y + " " + forest[y][x])
     if (forest[y][x] == '#') {
         trees++
     }
-    x = x + 3
+    x = (x + 3) % width
 }
 console.log(trees)
